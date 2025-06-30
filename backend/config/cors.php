@@ -18,7 +18,10 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://localhost:5173'], // or ['*'] for dev
+    'allowed_origins' => [
+        'http://localhost:5173',
+        'https://buildbyholdfast.site'
+    ],
 
     'allowed_origins_patterns' => [],
 

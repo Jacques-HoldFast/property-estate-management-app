@@ -242,7 +242,7 @@ const form = ref<MaintenanceRequest>({
 const isEditing = computed(() => !!props.maintenanceRequest?.id)
 
 const filteredResidents = computed(() => {
-  if (!form.value.property_id || form.value.property_id === '') return []
+  if (!form.value.property_id) return []
   return props.residents.filter(resident => resident.property_id === form.value.property_id)
 })
 
@@ -252,12 +252,12 @@ const onPropertyChange = () => {
 
 const handleSubmit = async () => {
   // Validate required fields
-  if (!form.value.property_id || form.value.property_id === '') {
+  if (!form.value.property_id) {
     alert('Please select a property')
     return
   }
   
-  if (!form.value.resident_id || form.value.resident_id === '') {
+  if (!form.value.resident_id) {
     alert('Please select a resident')
     return
   }

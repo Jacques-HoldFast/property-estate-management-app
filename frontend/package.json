@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "estatly-frontend",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
+    "@types/js-cookie": "^3.0.6",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.15.32",
     "@vitejs/plugin-vue": "^6.0.0",

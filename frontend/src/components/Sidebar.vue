@@ -6,7 +6,7 @@
           <Building2 :size="28" class="logo-building" />
         </div>
         <div class="logo-text">
-          <h1>Property Pulse</h1>
+          <h1>Estatly</h1>
           <p>Professional Management</p>
         </div>
       </div>

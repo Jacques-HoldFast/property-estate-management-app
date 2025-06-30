@@ -11,7 +11,7 @@
           <div class="mobile-logo-icon">
             <Building2 :size="24" class="logo-building" />
           </div>
-          <span class="logo-text">Property Pulse</span>
+          <span class="logo-text">Estatly</span>
         </div>
         <button @click="toggleMobileMenu" class="mobile-menu-btn">
           <Menu :size="24" />
@@ -35,7 +35,7 @@
             <div class="mobile-logo-icon">
               <Building2 :size="24" class="logo-building" />
             </div>
-            <span class="logo-text">Property Pulse</span>
+            <span class="logo-text">Estatly</span>
           </div>
           <button @click="closeMobileSidebar" class="close-btn">
             <X :size="24" />

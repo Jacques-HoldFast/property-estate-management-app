@@ -1,6 +1,6 @@
-# Property and Estate Management Application
+# Estatly - Property and Estate Management Application
 
-This project is a Property and Estate Management application built using Laravel for the backend and Vue.js for the frontend. It is designed to manage properties, tenants, and estate-related activities efficiently.
+Estatly is a modern Property and Estate Management application built using Laravel for the backend and Vue.js for the frontend. It is designed to manage properties, tenants, and estate-related activities efficiently.
 
 ## Project Structure
 
@@ -42,14 +42,67 @@ The frontend is built with Vue.js and contains the following directories:
 
 ## Getting Started
 
-To get started with the application, follow these steps:
+### Local Development
+
+To get started with the application locally, follow these steps:
 
 1. Clone the repository.
 2. Navigate to the `backend` directory and run `composer install` to install PHP dependencies.
 3. Set up your `.env` file for database configuration.
 4. Run `php artisan migrate` to set up the database.
 5. Navigate to the `frontend` directory and run `npm install` to install JavaScript dependencies.
-6. Run `npm run serve` to start the Vue.js application.
+6. Run `npm run dev` to start the Vue.js development server.
+7. Run `php artisan serve` in the backend directory to start the Laravel development server.
+
+### Testing
+
+Run the test suite to ensure everything is working:
+
+```bash
+# Frontend tests
+cd frontend
+npm run test:unit
+
+# Backend tests  
+cd backend
+php artisan test
+```
+
+## Production Deployment
+
+### Quick Deployment to cPanel Hosting
+
+1. **Build for production:**
+   ```bash
+   ./build-production.sh
+   ```
+
+2. **Upload files:**
+   - Upload `deployment/api/` contents to `public_html/api/`
+   - Upload `deployment/public_html/` contents to `public_html/`
+
+3. **Configure database in cPanel:**
+   - Create MySQL database and user
+   - Update `/api/.env` with database credentials
+
+4. **Run migrations:**
+   - Upload and visit `migrate-production.php` once
+   - Delete the migration file afterward
+
+5. **Set permissions:**
+   - Set `storage/` and `bootstrap/cache/` folders to 755
+
+### Detailed Deployment Guide
+
+See [deploy.md](deploy.md) for complete step-by-step deployment instructions for cPanel shared hosting.
+
+## Tech Stack
+
+- **Backend:** Laravel 11, PHP 8.1+, MariaDB/MySQL
+- **Frontend:** Vue.js 3, Vite, TypeScript, Vitest
+- **Testing:** PHPUnit (backend), Vitest + Vue Test Utils (frontend)
+- **Authentication:** Laravel Sanctum
+- **Styling:** Custom CSS with modern gradients and animations
 
 ## Contributing
 

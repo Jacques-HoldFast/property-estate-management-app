@@ -88,7 +88,7 @@ describe('Sidebar', () => {
     it('should display correct logo text', () => {
       const wrapper = mountComponent()
       
-      expect(wrapper.find('.logo-text h1').text()).toBe('Property Pulse')
+      expect(wrapper.find('.logo-text h1').text()).toBe('Estatly')
       expect(wrapper.find('.logo-text p').text()).toBe('Professional Management')
     })
   })

@@ -254,9 +254,10 @@ const visiblePages = computed(() => {
   return rangeWithDots.filter((item, index, array) => array.indexOf(item) === index)
 })
 
-const goToPage = (page: number) => {
-  if (page >= 1 && page <= totalPages.value) {
-    currentPage.value = page
+const goToPage = (page: string | number) => {
+  const pageNum = typeof page === 'string' ? parseInt(page) : page
+  if (pageNum >= 1 && pageNum <= totalPages.value) {
+    currentPage.value = pageNum
   }
 }
 
