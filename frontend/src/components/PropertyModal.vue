@@ -84,7 +84,7 @@
                   type="number"
                   required
                   min="0"
-                  step="1000"
+                  step="1"
                   placeholder="e.g., 2500000"
                 />
               </div>
@@ -313,17 +313,17 @@ const populateForm = (property: PropertyForm) => {
     title: property.title || '',
     description: property.description || '',
     type: property.type || '',
-    price: property.price,
-    bedrooms: property.bedrooms,
-    bathrooms: property.bathrooms,
-    parking_spaces: property.parking_spaces,
-    size_sqm: property.size_sqm,
+    price: property.price ? Number(property.price) : null,
+    bedrooms: property.bedrooms ? Number(property.bedrooms) : null,
+    bathrooms: property.bathrooms ? Number(property.bathrooms) : null,
+    parking_spaces: property.parking_spaces ? Number(property.parking_spaces) : null,
+    size_sqm: property.size_sqm ? Number(property.size_sqm) : null,
     address: property.address || '',
     city: property.city || '',
     province: property.province || '',
     postal_code: property.postal_code || '',
-    latitude: property.latitude,
-    longitude: property.longitude,
+    latitude: property.latitude ? Number(property.latitude) : null,
+    longitude: property.longitude ? Number(property.longitude) : null,
     status: property.status || 'available',
     is_featured: property.is_featured || false,
   }
